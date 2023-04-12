@@ -1,0 +1,27 @@
+Button{
+    background-color: #000866;
+    border: none;
+    padding: 15px;
+    border-radius: 10px; 
+    width: 100%;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+button:hover{
+    background-color: deepskyblue;
+}
+
+.butLogin{
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+    border-radius: 0%;
+    height: 100%;
+    
+}
+
+.butCad{
+    border-right: 1px solid grey;
+    border-radius: 0%;
+    height: 100%;
+}

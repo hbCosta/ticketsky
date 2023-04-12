@@ -1,0 +1,13 @@
+.itens{
+    background-color: #000866;
+    display: flex;
+}
+
+
+
+
+img{
+    margin-top: 0;
+    width: 100px;
+    height: 80px;
+}
