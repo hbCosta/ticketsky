@@ -2,13 +2,12 @@
 import { useState } from 'react'
 
 import Link from 'next/link'
-import { ButtonLogin } from '../../components/Button/buttonlogin'
 import './style.css'
-
 
 export const Login =()=>{
     const [email, setEmail] = useState('');
     const[senha, setSenha] = useState('');
+
 
 
     return(
@@ -35,11 +34,12 @@ export const Login =()=>{
                 <button type='submit'>Login</button>
                 <br />
                 <div>
-                    <nav>Não possui cadastro? 
+                    <p>Não possui cadastro? 
                         <Link href="/cadastro">cadastre-se</Link>
-                        </nav>
+                        </p>
                 </div>
             </form>
         </div>
-    );
+    )
+
 }

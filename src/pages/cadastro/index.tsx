@@ -7,7 +7,7 @@ import { useState } from 'react';
 const Cadastro = () => {
     const [email, setEmail] = useState('');
     const[senha, setSenha] = useState('');
-
+    
 
     return(
         <><TopBarCadastro />
@@ -16,13 +16,14 @@ const Cadastro = () => {
                 </h1>
                 <div><h1>Cadastro de Cliente</h1></div>
                 <br />
-                <div><input type="text" placeholder='email' /></div>
+                <div><input name='email'                     onChange={(e)=> setEmail(e.target.value)} 
+ type="text" placeholder='email' value={email} /></div>
                 <br />
-                <div><input type="password" placeholder='senha' /></div>
+                <div><input name='senha' type="password" placeholder='senha' value={senha} onChange={(e)=> setSenha(e.target.value)} /></div>
                 <br />
-                <div><input type="password" placeholder='confirme a senha' /></div>
+                <div><input name='confirmarsenha' type="password" placeholder='confirme a senha' /></div>
                 <br />
-                <div className='divbuton'><button>cadastrar</button></div>
+                <div className='divbuton'><button type='submit'>cadastrar</button></div>
             </div>
         </>
     );
