@@ -16,52 +16,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const senha = body.senha
     await query({
       query: "INSERT INTO usuario(email, senha) VALUES(?, ?)",
+      values:[email, senha],
     })
   }
 }
-
-
-
-
-
-/*
-type Data ={
-  message: string
-}
-
-export default async function handler(
-  req: NextApiRequest,
-  res: NextApiResponse<Data>
-){
-  const body = req.body
-
-
-  if(req.method == "GET"){
-    const users =  query({
-      query: "SELECT * FROM usuario WHERE usuario.email = ? AND usuario.senha = ?",
-      values: [req.query.email, req.query.senha],
-    })
-    console.log(users)
-
-    if(users != null){
-
-      res.redirect(307, '/?v=logado') 
-
-    }else{
-
-      res.redirect(307, '/?v=na')
-
-    }
-  } else if(req.method == "POST"){
-    const email =  body.email
-    const senha = body.senha
-    await query({ 
-    query: "INSERT INTO usuario (email, senha) VALUES(?, ?)",
-    values:[email, senha]
-    })
-    //res.redirect(307, '/v=cadastro')
-  }
-
-}
-
-*/
